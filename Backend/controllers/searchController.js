@@ -87,12 +87,12 @@ const searchTV = catchAsync(async (req, res, next) => {
   });
 });
 
-const getSearchHistory = catchAsync((req, res) => {
+const getSearchHistory = (req, res) => {
   res.status(200).json({
     status: "success",
     content: req.user.searchHistory,
   });
-});
+};
 
 const removeItemFromHistory = catchAsync(async (req, res) => {
   const id = parseInt(req.params.id, 10); // Parse directly while destructuring
