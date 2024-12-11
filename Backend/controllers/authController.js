@@ -86,4 +86,16 @@ const protect = catchAsync(async (req, res, next) => {
   next();
 });
 
-export default { signup, signIn, logout, protect };
+const authCheck = (req, res) => {
+  try {
+    res.status(200).json({
+      status: "success",
+      user: req.user,
+    });
+  } catch (err) {
+    console.log("Error in authCheck controller", error.message);
+    res.status(500).json({ success: false, message: "Internal server error" });
+  }
+};
+
+export default { signup, signIn, logout, protect, authCheck };
