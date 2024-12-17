@@ -5,6 +5,7 @@ import SignupPage from "./pages/SignupPage";
 import { Toaster } from "react-hot-toast";
 import { useAuthStore } from "./store/authUser";
 import { useEffect } from "react";
+import Footer from "./components/Footer";
 
 function App() {
   const { user, isCheckingAuth, authCheck } = useAuthStore();
@@ -16,11 +17,7 @@ function App() {
 
   // if (isCheckingAuth) {
   //   return (
-  //     <div className="h-screen">
-  //       <div className="flex justify-center items-center bg-black h-full">
-  //         <Loader className="animate-spin text-red-600 size-10" />
-  //       </div>
-  //     </div>
+  //
   //   );
   // }
 
@@ -37,7 +34,7 @@ function App() {
           element={!user ? <SignupPage /> : <Navigate to={"/"} />}
         />
       </Routes>
-
+      <Footer />
       <Toaster />
     </>
   );

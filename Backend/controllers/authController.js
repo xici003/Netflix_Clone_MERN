@@ -32,11 +32,7 @@ const signup = async (req, res, next) => {
     return next(new AppError("This email is already in use.", 400));
   }
 
-  const PROFILE_PICS = [
-    "../public/img/avatar1.png",
-    "../public/img/avatar2.png",
-    "../public/img/avatar3.png",
-  ];
+  const PROFILE_PICS = ["/avatar1.png", "/avatar2.png", "/avatar3.png"];
   const photo = PROFILE_PICS[Math.floor(Math.random() * PROFILE_PICS.length)];
 
   try {
