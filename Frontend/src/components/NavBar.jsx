@@ -19,7 +19,7 @@ function NavBar() {
       <div className="flex items-center gap-10 z-50">
         <Link to="/">
           <img
-            src="./netflix-logo.png"
+            src="../netflix-logo.png"
             alt="netflix_logo"
             className="w-20 sm:w-32"
           />

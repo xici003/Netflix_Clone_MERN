@@ -46,7 +46,7 @@ const getSimilarTvShow = catchAsync(async (req, res, next) => {
 
   res.status(201).json({
     status: "success",
-    tvShows: data.results,
+    content: data.results,
   });
 });
 
