@@ -45,7 +45,7 @@ const searchMovie = catchAsync(async (req, res, next) => {
     $push: {
       searchHistory: {
         id: response.results[0].id,
-        image: response.results[0].profile_path,
+        image: response.results[0].poster_path,
         title: response.results[0].title,
         searchType: "movie",
         createAt: Date.now(),
@@ -73,7 +73,7 @@ const searchTV = catchAsync(async (req, res, next) => {
     $push: {
       searchHistory: {
         id: response.results[0].id,
-        image: response.results[0].profile_path,
+        image: response.results[0].poster_path,
         title: response.results[0].name,
         searchType: "tv",
         createAt: Date.now(),

@@ -44,11 +44,7 @@ function NavBar() {
           >
             TV Shows
           </Link>
-          <Link
-            to="/history"
-            className="hover:text-[#575757]"
-            onClick={() => setContentType("history")}
-          >
+          <Link to="/history" className="hover:text-[#575757]">
             Search History
           </Link>
         </div>

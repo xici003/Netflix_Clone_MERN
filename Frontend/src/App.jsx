@@ -8,6 +8,8 @@ import { useEffect } from "react";
 import Footer from "./components/Footer";
 import WatchPage from "./pages/WatchPage";
 import SearchPage from "./pages/SearchPage";
+import HistoryPage from "./pages/HistoryPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   const { user, isCheckingAuth, authCheck } = useAuthStore();
@@ -44,6 +46,11 @@ function App() {
           path="/search"
           element={user ? <SearchPage /> : <Navigate to={"/login"} />}
         />
+        <Route
+          path="/history"
+          element={user ? <HistoryPage /> : <Navigate to={"/login"} />}
+        />
+        <Route path="/*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
       <Toaster />
