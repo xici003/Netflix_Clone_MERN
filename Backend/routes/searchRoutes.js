@@ -4,7 +4,7 @@ import searchController from "../controllers/searchController.js";
 const router = express.Router();
 
 router.get("/person/:query", searchController.searchPerson);
-router.get("/movie/:query", searchController.searchMovie);
+router.get("/movies/:query", searchController.searchMovie);
 router.get("/tv/:query", searchController.searchTV);
 
 router.get("/history", searchController.getSearchHistory);
